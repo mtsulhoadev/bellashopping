@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Bella Shopping Infantil – Moda infantil cheia de charme.</title>
+<title>Bella Shopping Infantil – Moda infantil cheia de charme</title>
 <meta name="description" content="Conjuntos, vestidos e looks para meninas de 1 a 10 anos. Bella Shopping Infantil, em Brasília.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,6 +30,11 @@ header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 9
 .nav nav a:not(.btn){font:600 17px "Baloo 2",Nunito,sans-serif;text-decoration:none;color:var(--ink);padding:6px 14px;border-radius:99px}
 .nav nav a:not(.btn):hover{color:var(--rasp);background:var(--blush)}
 .nav .btn{padding:8px 20px;font-size:15px;margin-left:8px}
+.nav nav a.shp{box-shadow:inset 0 0 0 2px var(--pink);color:var(--rasp);margin:0 4px}
+.shop{padding:20px 0 60px}
+.shopbox{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;background:var(--surface);border:2px dashed var(--pink);border-radius:32px;padding:32px 36px}
+.shopbox h2{font-size:clamp(26px,3.6vw,36px)}
+.shopbox p{margin:8px 0 0;color:var(--muted)}
 .btn{display:inline-flex;align-items:center;gap:8px;background:var(--pink);color:#fff;font-weight:800;text-decoration:none;padding:13px 24px;border-radius:99px;border:0;cursor:pointer;font-size:16px;font-family:inherit;box-shadow:0 8px 20px -8px var(--pink)}
 .btn:hover{background:var(--rasp)}
 .btn.ghost{background:transparent;color:var(--rasp);box-shadow:inset 0 0 0 2px var(--pink)}
@@ -103,7 +108,7 @@ footer a:hover{color:#fff;text-decoration:underline}
 .lb.on{display:flex}
 .lb img{max-height:92vh;max-width:100%;border-radius:18px}
 .lb button{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:16px;font-size:30px;line-height:1;background:#fff;color:#b00f4f;border:0;border-radius:50%;width:46px;height:46px;cursor:pointer}
-@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.collage{height:460px;max-width:420px;margin:0 auto;width:100%}.about .wrap{grid-template-columns:1fr;gap:28px}.nav .btn{display:none}.brand img{height:46px}.nav nav{gap:0}.nav nav a:not(.btn){font-size:15px;padding:4px 6px}section{padding:60px 0}}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.collage{height:460px;max-width:420px;margin:0 auto;width:100%}.about .wrap{grid-template-columns:1fr;gap:28px}header{position:static}.nav{flex-direction:column;gap:2px;padding:6px 0}.nav .btn{display:none}.brand img{height:46px}.nav nav{gap:0;flex-wrap:wrap;justify-content:center}.nav nav a:not(.btn){font-size:15px;padding:4px 9px}.nav nav a.shp{margin:0 2px}.shopbox{padding:24px}section{padding:60px 0}}
 @media (max-width:860px){.fgrid{grid-template-columns:1fr 1fr}.fbrand{grid-column:1/-1}}
 @media (max-width:520px){.vals{grid-template-columns:1fr}.fgrid{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
@@ -112,7 +117,7 @@ footer a:hover{color:#fff;text-decoration:underline}
 <body>
 <header><div class="wrap nav">
 <a class="brand" href="#topo" aria-label="Bella Shopping Infantil, início"><img src="img/logo.png" alt="Logo Bella Shopping Infantil"></a>
-<nav aria-label="Menu principal"><a href="#sobre">Sobre</a><a href="#produtos">Produtos</a><a href="#galeria">Galeria</a><a href="#contato">Contato</a><a class="btn" href="https://wa.me/5561993255583" target="_blank" rel="noopener">WhatsApp</a></nav>
+<nav aria-label="Menu principal"><a href="#sobre">Sobre</a><a href="#produtos">Produtos</a><a href="#galeria">Galeria</a><a class="shp" data-shopee href="#">Shopee <span aria-hidden="true">&#8599;</span></a><a href="#contato">Contato</a><a class="btn" href="https://wa.me/5561993255583" target="_blank" rel="noopener">WhatsApp</a></nav>
 </div></header>
 <main id="topo">
 <div class="hero"><div class="wrap">
@@ -147,6 +152,11 @@ footer a:hover{color:#fff;text-decoration:underline}
 <div class="masonry" id="masonry"></div>
 </div></section>
 
+<section class="shop" id="shopee"><div class="wrap"><div class="shopbox">
+<div><h2>Também estamos na Shopee</h2><p>Prefere comprar pela Shopee? Visite a nossa loja e confira as peças disponíveis.</p></div>
+<a class="btn" data-shopee href="#">Ir para a loja na Shopee</a>
+</div></div></section>
+
 <section class="contact" id="contato"><div class="wrap"><div class="box">
 <h2>Vamos conversar?</h2>
 <p>Fale com a Bella Shopping Infantil para saber tamanhos, cores e novidades.</p>
@@ -158,7 +168,7 @@ footer a:hover{color:#fff;text-decoration:underline}
 <div class="fbrand"><img src="img/logo.png" alt="Logo Bella Shopping Infantil">
 <p>Moda infantil para meninas de 1 a 10 anos, com tecidos macios, looks modernos e detalhes que encantam.</p>
 <div class="social"><a href="https://wa.me/5561993255583" target="_blank" rel="noopener">WhatsApp</a><a href="https://instagram.com/bella.shopping_infantil" target="_blank" rel="noopener">Instagram</a></div></div>
-<nav aria-label="Rodapé"><h4>Navegação</h4><ul><li><a href="#topo">Início</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#produtos">Produtos</a></li><li><a href="#galeria">Galeria</a></li><li><a href="#contato">Contato</a></li></ul></nav>
+<nav aria-label="Rodapé"><h4>Navegação</h4><ul><li><a href="#topo">Início</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#produtos">Produtos</a></li><li><a href="#galeria">Galeria</a></li><li><a data-shopee href="#">Loja na Shopee</a></li><li><a href="#contato">Contato</a></li></ul></nav>
 <div><h4>Ver por tamanho</h4><div class="sizes"><a href="#produtos" data-size="1 ano">1 ano</a><a href="#produtos" data-size="2 anos">2 anos</a><a href="#produtos" data-size="3 anos">3 anos</a><a href="#produtos" data-size="4 anos">4 anos</a><a href="#produtos" data-size="6 anos">6 anos</a><a href="#produtos" data-size="10 anos">10 anos</a></div></div>
 <div class="fcon"><h4>Fale com a gente</h4><p>Dúvidas sobre tamanho, cor ou novidades? Chame no WhatsApp.</p><ul><li><a href="https://wa.me/5561993255583" target="_blank" rel="noopener">61 99325-5583</a></li><li><a href="https://instagram.com/bella.shopping_infantil" target="_blank" rel="noopener">@bella.shopping_infantil</a></li></ul></div>
 </div>
@@ -206,6 +216,8 @@ const m=document.getElementById('masonry');
  b.onclick=()=>open(i,P[i].n);m.appendChild(b);
 });
 document.getElementById('lbx').onclick=close;
+const SHOPEE_URL='https://shopee.com.br/SEU_USUARIO';
+document.querySelectorAll('[data-shopee]').forEach(a=>{a.href=SHOPEE_URL;a.target='_blank';a.rel='noopener'});
 const tema=document.getElementById('tema'),R=document.documentElement;
 const dark=()=>R.dataset.theme?R.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
 const lab=()=>{tema.textContent=dark()?'Modo claro':'Modo escuro'};
